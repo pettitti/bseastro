@@ -1,0 +1,13 @@
+{{ define "main" }}
+
+<div class="container">
+<h2 class="display-4 text-center">Main body goes here</h2>
+</div>
+  {{ .Content }}
+  {{ range site.RegularPages }}
+    <section>
+      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
+      {{ .Summary }}
+    </section>
+  {{ end }}
+{{ end }}
